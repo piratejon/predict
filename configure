@@ -8,8 +8,8 @@
 
 whoiam=`whoami`
 
-if [ $whoiam != "root" ]; then
-	echo "Sorry $whoiam.  You need to be 'root' to install PREDICT.  :-("
+if [ $whoiam = "root" ]; then
+	echo do not run as root
 else
 	oldterm=$TERM
 	export TERM=linux
